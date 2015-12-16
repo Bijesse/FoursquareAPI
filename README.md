@@ -59,13 +59,13 @@ Sign in or create a Foursquare account and create a new app. You will need to co
 
 
 ###4) Make a GET request to the Foursquare API
-You can make a behind-the-scenes (asynchronous) request to Foursquare's API server using the jQuery .get() function. Read the [.get() documentation](https://api.jquery.com/jquery.get/) and then copy the code below into your ```ready``` function. Note that you'll need to create variables for ```client_id``` and ```client_secret``` using the values you copy and pasted from the Foursquare Developer website.
+You can make a behind-the-scenes (asynchronous) request to Foursquare's API server using the jQuery .get() function. Read the [.get() documentation](https://api.jquery.com/jquery.get/) and then copy the code below into the ```.click``` function you created during the Do Now. Note that you'll need to create variables for ```client_id``` and ```client_secret``` using the values you copy and pasted from the Foursquare Developer website.
 
         $.get("https://api.foursquare.com/v2/venues/search" +
             "?client_id=" + client_id +
             "&client_secret=" + client_secret +
             "&v=20151209" +
-            "&near=nyc"
+            "&near=nyc" +
             "&query=pizza",
             function(data) {
                 // Callback code goes here. This gets executed after receiving data from the Foursquare API.
