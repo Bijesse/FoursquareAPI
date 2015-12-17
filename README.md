@@ -72,14 +72,20 @@ You can make a behind-the-scenes (asynchronous) request to Foursquare's API serv
             });
 
 ###4) Inspect a response from the Foursquare API
-In the callback from ```.get()```, log the ```data``` variable to the console. Run the website in Chrome, and open View -> Developer -> Javascript console. Expand the data object to see what's inside. Poke around and explore! 
+#####A) In the callback from ```.get()```, log the ```data``` variable to the console.   
+#####B) Preview the website in Chrome, and open View -> Developer -> Javascript console.   
+#####C) Click the Submit button.    
+#####D) Expand the data object to look for the names of venues in NYC.  
 
 ###5) Append the venue name and phone number to the ```#results``` element
 Hint: you can append HTML using [jQuery .append()](http://api.jquery.com/append/).
 
 ###6) Use the address input by the user
-Now that the document is ready you must store the user's response in a variable.  See the param ```&near=nyc``` in the sample code? You want to replace "nyc" with a variable for the address, which comes from the text entered by the user in the input field.
+Now that the document is ready you must change the parameter that searches for pizzerias by the location the user types in.  
 
+See the param &near=nyc in the sample code?
+You want to replace "nyc" with the value of what the user types in, which comes from the text entered by the user in the input field.  
+**Hint: you can find the value of something using [jQuery .val()](http://api.jquery.com/val/). 
 
 ####Bonus) 
 Your Manager has offered a stipend of $500 for each of the bonus requirements listed below:  
