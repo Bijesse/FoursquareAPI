@@ -72,10 +72,10 @@ You can make a behind-the-scenes (asynchronous) request to Foursquare's API serv
             });
 
 ###4) Inspect a response from the Foursquare API
-#####A) In the callback from ```.get()```, log the ```data``` variable to the console.   
-#####B) Preview the website in Chrome, and open View -> Developer -> Javascript console.   
-#####C) Click the Submit button.    
-#####D) Expand the data object to look for the names of venues in NYC.  
+** Step 4A** In the callback from ```.get()```, log the ```data``` variable to the console.   
+** Step 4B** Preview the website in Chrome, and open View -> Developer -> Javascript console.   
+** Step 4C** Click the Submit button.    
+** Step 4D** Expand the data object to look for the names of venues in NYC.  
 
 ###5) Append the venue name and phone number to the ```#results``` element
 Hint: you can append HTML using [jQuery .append()](http://api.jquery.com/append/).
@@ -85,7 +85,7 @@ Now that the document is ready you must change the parameter that searches for p
 
 See the param &near=nyc in the sample code?
 You want to replace "nyc" with the value of what the user types in, which comes from the text entered by the user in the input field.  
-**Hint: you can find the value of something using [jQuery .val()](http://api.jquery.com/val/). 
+**Hint: you can find the value of something using [jQuery .val()](http://api.jquery.com/val/).** 
 
 ####Bonus) 
 Your Manager has offered a stipend of $500 for each of the bonus requirements listed below:  
