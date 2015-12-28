@@ -49,16 +49,20 @@ This should have already been completed during the [Do Now](doNow.md).
 **Before moving on to step two, ensure your HTML is correct by having an instructor confirm you are ready to move on.** 
 
 ###2) Ready the Document
-Now that you have initialized the yourwebapp it is time to "ready" the document. For information on how to do this, research the [jQuery ready function](https://api.jquery.com/ready/).  
-*Hint: all of the remaining code for this project will fall inside of this .ready function.*
+Now that you have initialized the yourwebapp it is time to "ready" you script.js document. For information on how to do this, research the [jQuery ready function](https://api.jquery.com/ready/).  
+*Hint: all of the remaining code for this project will fall inside of this .ready function.*  
 
-###3) Obtain a Client ID and Secret
+###3) Prototype with a Click Handler 
+Set up a click handler for the submit button so that when the button is clicked it will display an alert to prepare for the next steps.  
+Note: This click handler is not part of the final code. It is to test your code at this stage and should be deleted before moving onto step 4.  
+
+###4) Obtain a Client ID and Secret
 In order to use a company's API you must request access and have them send you an API key. Foursquare asks you to do this by registering your app on the [Foursquare Developer website](https://foursquare.com/developers/apps) page.
 
 Sign in or create a Foursquare account and create a new app. You will need to copy and paste the Client ID and Client Secret into your ```script.js```. Add them as variables called ```client_id``` and ```client_secret``` inside your ```ready``` function.
 
 
-###4) Make a GET request to the Foursquare API
+###5) Make a GET request to the Foursquare API
 You can make a behind-the-scenes (asynchronous) request to Foursquare's API server using the jQuery .get() function. Read the [.get() documentation](https://api.jquery.com/jquery.get/) and then copy the code below into the ```.click``` function you created during the Do Now. Note that you'll need to create variables for ```client_id``` and ```client_secret``` using the values you copy and pasted from the Foursquare Developer website.
 
         $.get("https://api.foursquare.com/v2/venues/search" +
@@ -71,16 +75,16 @@ You can make a behind-the-scenes (asynchronous) request to Foursquare's API serv
                 // Callback code goes here. This gets executed after receiving data from the Foursquare API.
             });
 
-###4) Inspect a response from the Foursquare API
-**Step 4A** In the callback from ```.get()```, log the ```data``` variable to the console.   
-**Step 4B** Preview the website in Chrome, and open View -> Developer -> Javascript console.   
-**Step 4C** Click the Submit button.    
-**Step 4D** Expand the data object to look for the names of venues in NYC.  
+###6) Inspect a response from the Foursquare API
+**Step 6A** In the callback from ```.get()```, log the ```data``` variable to the console.   
+**Step 6B** Preview the website in Chrome, and open View -> Developer -> Javascript console.   
+**Step 6C** Click the Submit button.    
+**Step 6D** Expand the data object to look for the names of venues in NYC.  
 
-###5) Append the venue name and phone number to the ```#results``` element
+###7) Append the venue name and phone number to the ```#results``` element
 Hint: you can append HTML using [jQuery .append()](http://api.jquery.com/append/).
 
-###6) Use the address input by the user
+###8) Use the address input by the user
 Now that the document is ready you must change the parameter that searches for pizzerias by the location the user types in.  
 
 See the param &near=nyc in the sample code?
