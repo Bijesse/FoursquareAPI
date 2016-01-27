@@ -14,8 +14,8 @@ $( document ).ready(function() {
         "&query=pizza",
         function(data) {
             //console.log(data);
-         var answer = data["response"]["venues"][0]["name"] + data["response"]["venues"][0]["contact"]["phone"];
-            $('#results').append(answer);
+         var answer = data["response"]["venues"][0]["name"] + " " + data["response"]["venues"][0]["contact"]["phone"];
+            $('#results').append("<li>" + answer + "</li>");
         });
     });
 

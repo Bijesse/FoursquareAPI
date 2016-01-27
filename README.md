@@ -94,6 +94,7 @@ You want to replace "nyc" with the value of what the user types in, which comes 
 ####Bonus) 
 Your Manager has offered a stipend of $500 for each of the bonus requirements listed below:  
 
+* Display ten pizzerias based on the user's search instead of just one. Do this using a for loop.
 * Let the user search for things other than Pizza
 * Add a "Current location" button that gets the user's current location from the browser
 * Show a thumbnail photo specific to the venue
