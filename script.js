@@ -11,13 +11,22 @@ $( document ).ready(function() {
         "&client_secret=" + client_secret +
         "&v=20151209" +
         "&near=" + $("#address").val() +
-        "&query=pizza",
+        "&query=" + $("#food").val(),
         function(data) {
             //console.log(data);
-         var answer = data["response"]["venues"][0]["name"] + " " + data["response"]["venues"][0]["contact"]["phone"];
+            for(var i=0;i<10;i++){
+         var answer = "Name of the resturant is : " + data["response"]["venues"][i]["name"] + ",  Phone number is " + data["response"]["venues"][i]["contact"]["formattedPhone"]+"Address is: "+data["response"]["venues"][i]["location"]["formattedAddress"][0]+" "+data["response"]["venues"][i]["location"]["formattedAddress"][1]+" "+data["response"]["venues"][i]["location"]["formattedAddress"][2];
             $('#results').append("<li>" + answer + "</li>");
+            }
         });
+    
+        $("#clear").click(function (evaluate){
+        $("#results").empty();
+        
+        
     });
+    });
+    
 
 });
 
